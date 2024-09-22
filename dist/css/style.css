@@ -1165,6 +1165,63 @@ p:not(:last-child) {
   padding-top: 30.122%;
 }
 
+.man {
+  position: fixed;
+  z-index: 90;
+  bottom: 20px;
+  right: 140px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  width: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+.man:hover .man__buttons {
+  display: block;
+  -webkit-animation: fade 0.5s linear;
+  animation: fade 0.5s linear;
+}
+.man__pic img {
+  border-radius: 8px;
+}
+.man__buttons {
+  padding: 0 0 16px 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  display: none;
+}
+.man__buttons-item {
+  background: rgba(95, 175, 45, 0.2);
+  -webkit-backdrop-filter: blur(32px);
+  backdrop-filter: blur(32px);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  border-radius: 8px;
+}
+.man__buttons-item:not(:last-child) {
+  margin: 0 0 8px 0;
+}
+.man__buttons-icon {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
 .timer {
   padding: 16px 24px;
   padding-bottom: 22px;
@@ -1189,12 +1246,27 @@ p:not(:last-child) {
   display: -ms-grid;
   display: grid;
   justify-items: center;
+  position: relative;
+}
+.timer__item:first-child::after {
+  content: ":";
+  font-size: 64px;
+  line-height: 90%;
+  position: absolute;
+  right: -22px;
+  top: -3px;
+  color: #003E14;
+  -webkit-animation: fade 1s linear infinite;
+  animation: fade 1s linear infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 .timer__item span {
   font-size: 64px;
   line-height: 90%;
   letter-spacing: 0.04em;
   font-weight: 300;
+  color: #003E14;
 }
 .timer__item p {
   font-weight: 400;
@@ -1216,6 +1288,11 @@ p:not(:last-child) {
 @media screen and (max-width: 1024px) {
   .container {
     padding: 0 20px;
+  }
+  .timer,
+  .man {
+    right: 40px;
+    bottom: 40px;
   }
   .header {
     padding: 16px 0;
@@ -1450,6 +1527,22 @@ p:not(:last-child) {
   }
   p:not(:last-child) {
     margin: 0 0 12px 0;
+  }
+  .timer,
+  .man {
+    right: 10px;
+    bottom: 10px;
+  }
+  .man {
+    font-size: 10.5px;
+    width: 180px;
+    letter-spacing: 0;
+  }
+  .man__buttons-icon {
+    width: 22px;
+  }
+  .man__buttons-item {
+    padding: 6px 11px;
   }
   .footer__inner {
     -ms-grid-columns: 2fr 15px 2fr;

@@ -102,6 +102,7 @@ $(document).ready(function () {
 				$this.addClass("current");
 			}
 		});
+		placeTimer()
 		$("html, body").animate(
 			{
 				scrollTop: $(window.location.hash).offset().top - 140,
@@ -110,45 +111,47 @@ $(document).ready(function () {
 		);
 		return false;
 	}
-
-	function declensionTime(value, words) {
-		const cases = [2, 0, 1, 1, 1, 2];
-		const output =
-			words[
-			value % 100 > 4 && value % 100 < 20 ? 2 : cases[Math.min(value % 10, 5)]
-			];
-		return output;
-	}
-
-	const targetDate = new Date("2024-09-25T09:00:00");
-	function updateTimer() {
-		const now = new Date();
-		const remaining = targetDate - now;
-
-		if (remaining <= 0) {
-			console.log("Время вышло");
-			clearInterval(timerInterval);
-			$("#timer").remove();
-			return;
+	function placeTimer() {
+		function declensionTime(value, words) {
+			const cases = [2, 0, 1, 1, 1, 2];
+			const output =
+				words[
+				value % 100 > 4 && value % 100 < 20 ? 2 : cases[Math.min(value % 10, 5)]
+				];
+			return output;
 		}
 
-		const totalHours = Math.floor(remaining / (1000 * 60 * 60));
-		const hours = totalHours % 24;
-		const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+		const targetDate = new Date("2024-09-25T09:00:00");
+		function updateTimer() {
+			const now = new Date();
+			const remaining = targetDate - now;
 
-		const outputTimer = `
-			<div class="timer__item hours"><span>${totalHours}</span> <p>${declensionTime(
-			totalHours,
-			["час", "часа", "часов"]
-		)}</p></div>
-			<div class="timer__item minutes"><span>${minutes}</span> <p>${declensionTime(
-			minutes,
-			["минута", "минуты", "минут"]
-		)}</p></div>
-		`;
-		$("#timer .timer__row").html(outputTimer);
+			if (remaining <= 0) {
+				console.log("Время вышло");
+				clearInterval(timerInterval);
+				$("#timer").remove();
+				return;
+			}
+
+			const totalHours = Math.floor(remaining / (1000 * 60 * 60));
+			const hours = totalHours % 24;
+			const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+
+			const outputTimer = `
+				<div class="timer__item hours"><span>${totalHours}</span> <p>${declensionTime(
+				totalHours,
+				["час", "часа", "часов"]
+			)}</p></div>
+				<div class="timer__item minutes"><span>${minutes}</span> <p>${declensionTime(
+				minutes,
+				["минута", "минуты", "минут"]
+			)}</p></div>
+			`;
+			$("#timer .timer__row").html(outputTimer);
+		}
+
+		const timerInterval = setInterval(updateTimer, 1000);
+		updateTimer();
 	}
-
-	const timerInterval = setInterval(updateTimer, 1000);
-	updateTimer();
+	placeTimer()
 });
