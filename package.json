@@ -34,6 +34,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-sass-glob": "^1.1.0",
     "gulp-util": "^3.0.8",
+    "gulp-version-number": "^0.2.4",
     "gulp-webp": "^4.0.1",
     "imagemin-pngquant": "^9.0.2",
     "postcss": "^8.4.21",

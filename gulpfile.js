@@ -31,6 +31,8 @@ import plumber from "gulp-plumber"; // Обработка ошибок
 import util from "gulp-util";
 import vinylFTP from "vinyl-ftp";
 
+import versionNumber from "gulp-version-number"; // Обновление версии css и js файлов
+
 // Пути к папкам и файлам проекта
 const path = {
   buildFolder: "./dist",
@@ -81,6 +83,19 @@ function buildPug() {
     .pipe(
       pug({
         pretty: true,
+      })
+    )
+    .pipe(
+      versionNumber({
+        value: "%DT%",
+        append: {
+          key: "_v",
+          cover: 0,
+          to: ["css", "js"],
+        },
+        output: {
+          file: "version.json",
+        },
       })
     )
     .pipe(
