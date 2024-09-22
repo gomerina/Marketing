@@ -1088,11 +1088,12 @@ video {
 	font-size: 14px;
 	font-weight: 500;
 	line-height: normal;
-	max-width: 240px;
-	width: 100%;
-	transition: .5s ease-in-out;
+
+	transition: max-width .5s ease-in-out;
 	display: flex;
 	flex-direction: column-reverse;
+
+
 
 	&.active {
 		max-width: 340px;
@@ -1143,14 +1144,19 @@ video {
 
 	&__pic {
 		position: relative;
+		width: 240px;
+		height: 160px;
+		transition: .3s ease-in-out;
 
+		& video,
 		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 			border-radius: 10px;
+			pointer-events: none;
 		}
 
-		& video {
-			border-radius: 10px;
-		}
 	}
 
 	&__buttons {
@@ -1187,14 +1193,27 @@ video {
 .timer {
 	padding: 16px 24px;
 	padding-bottom: 22px;
-	position: fixed;
-	z-index: 90;
-	bottom: 20px;
-	right: 140px;
 	background: rgba(95, 175, 45, 0.2);
 	backdrop-filter: blur(32px);
 	width: 240px;
+	height: 160px;
 	border-radius: 8px;
+
+	&-box {
+		position: fixed;
+		z-index: 90;
+		bottom: 20px;
+		right: 140px;
+
+		&.has-timer {
+			&:hover {
+				& .man__pic {
+					opacity: 0;
+					visibility: hidden;
+				}
+			}
+		}
+	}
 
 	&__row {
 		display: grid;
@@ -1251,6 +1270,8 @@ video {
 }
 
 @media screen and (min-width: 1025px) {
+
+	.compensate-for-scrollbar .timer-box,
 	.compensate-for-scrollbar .man {
 		right: 157px;
 	}
@@ -1261,7 +1282,7 @@ video {
 		padding: 0 20px;
 	}
 
-	.timer,
+	.timer-box,
 	.man {
 		right: 40px;
 		bottom: 40px;
@@ -1528,7 +1549,7 @@ video {
 		margin: 0 0 12px 0;
 	}
 
-	.timer,
+	.timer-box,
 	.man {
 		right: 10px;
 		bottom: 10px;
@@ -1536,7 +1557,6 @@ video {
 
 	.man {
 		font-size: 10.5px;
-		max-width: 180px;
 		letter-spacing: 0;
 
 		&.active {

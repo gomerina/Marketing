@@ -1031,8 +1031,24 @@ html(lang="ru")
                                                 source(srcset=item.webp, type="image/webp")
                                                 img(src=item.img, alt="" loading="lazy")
 
-        .timer#timer 
-            .timer__head Скоро увидимся!
-            .timer__row 
+        
+        .timer-box.has-timer.jsTimerBox
+            .man 
+                .man__pic 
+                    video(src="video/video.mp4" autoplay muted loop playsinline pip="false")
+                .man__buttons 
+                    a(href="video/video.mp4" data-fancybox).man__buttons-item.jsManBtn
+                        span Приветственная речь 
+                        .man__buttons-icon(style="background-image: url('img/mi-1.png')")
+                    .man__buttons-item.jsOpenFrame.jsManBtn(data-url="https://stanislav.digitalavatars.ru/") 
+                        span Прямая линия с AI CEO
+                        .man__buttons-icon(style="background-image: url('img/mi-2.png')")
+            .timer#timer 
+                .timer__head Скоро увидимся!
+                .timer__row 
+            
+        
+        
+        
         include includes/footer
         
