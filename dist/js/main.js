@@ -49,8 +49,6 @@ $(document).ready(function () {
 		$(this).next(".jsTogglerBody").slideToggle();
 	});
 	$(document).on("click", ".jsAnchorLink", function () {
-		$(".jsAnchorLink").removeClass("current");
-		$(this).addClass("current");
 		$(".jsBurger, .jsMenu").removeClass("active");
 		let anchor = $(this).attr("href");
 		$("html, body").animate(
@@ -59,6 +57,7 @@ $(document).ready(function () {
 			},
 			600
 		);
+		return false
 	});
 	$(document).on("click", ".jsAnchorLogo", function () {
 		$("html, body").animate(
