@@ -4,9 +4,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/swiper.css?_v=20240922135245">
-	<link rel="stylesheet" href="css/fancybox.css?_v=20240922135245">
-	<link rel="stylesheet" href="css/style.css?_v=20240922135245">
+	<link rel="stylesheet" href="css/swiper.css?_v=20240922150256">
+	<link rel="stylesheet" href="css/fancybox.css?_v=20240922150256">
+	<link rel="stylesheet" href="css/style.css?_v=20240922150256">
 	<title>Сбер маркетинг</title>
 </head>
 
@@ -2086,12 +2086,24 @@
 			</div>
 		</div>
 	</main>
-	<div class="man">
+	<div class="man jsPreview">
 		<div class="man__pic">
-			<picture>
-				<source srcset="img/webp/man.webp" type="image/webp">
-				<img src="img/man.jpg" alt="">
-			</picture>
+			<div class="man__trigger jsTrigger"></div>
+			<div class="man__controls">
+				<div class="man__controls-item jsVideoRemove">
+					<svg width="14px" height="14px" viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M3 21.32L21 3.32001" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+						<path d="M3 3.32001L21 21.32" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</div>
+				<div class="man__controls-item hidden jsDefaultStatus">
+					<svg width="14px" height="14px" viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M3 21.32L21 3.32001" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+						<path d="M3 3.32001L21 21.32" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</div>
+			</div>
+			<video class="jsVideo" src="video/video.mp4" autoplay muted loop playsinline> </video>
 		</div>
 		<div class="man__buttons">
 			<a class="man__buttons-item" href="video/video.mp4" data-fancybox>
@@ -2153,10 +2165,10 @@
 			</div>
 		</div>
 	</footer>
-	<script src="js/jquery-3.6.1.js?_v=20240922135245"></script>
-	<script src="js/fancybox.js?_v=20240922135245"> </script>
-	<script src="js/swiper.js?_v=20240922135245"></script>
-	<script src="js/main.js?_v=20240922135245">   </script>
+	<script src="js/jquery-3.6.1.js?_v=20240922150256"></script>
+	<script src="js/fancybox.js?_v=20240922150256"> </script>
+	<script src="js/swiper.js?_v=20240922150256"></script>
+	<script src="js/main.js?_v=20240922150256">   </script>
 </body>
 
 </html>

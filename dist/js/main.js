@@ -95,6 +95,44 @@ $(document).ready(function () {
 		);
 		return false;
 	});
+
+
+	function checkVideoStatus() {
+		var video = $('.jsVideo').get(0);
+		if ($('.jsPreview').hasClass('active')) {
+			$('.jsTrigger').hide();
+			$('.jsVideoRemove').addClass('hidden')
+			$('.jsDefaultStatus').removeClass('hidden')
+			video.currentTime = 0;
+			video.muted = false;
+			video.setAttribute('controls', '');
+			video.play();
+
+		} else {
+			$('.jsTrigger').show()
+			$('.jsDefaultStatus').addClass('hidden')
+			$('.jsVideoRemove').removeClass('hidden')
+			video.currentTime = 0;
+			video.muted = true;
+			video.removeAttribute('controls');
+			video.play();
+		}
+	}
+	$(document).on('click', '.jsVideoRemove', function () {
+		$('.jsPreview').remove()
+	})
+
+	$(document).on('click', '.jsDefaultStatus', function () {
+		$('.jsPreview').removeClass('active');
+		checkVideoStatus()
+	})
+	$(document).on('click', '.jsTrigger', function () {
+		$('.jsPreview').addClass('active');
+		checkVideoStatus()
+	})
+
+
+
 	if (!window.location.hash) {
 		$(".jsAnchorLink").first().addClass("current");
 	} else {
