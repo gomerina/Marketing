@@ -1164,7 +1164,7 @@ p:not(:last-child) {
   grid-column: span 3;
 }
 .team__item.span-3 .team__item-head {
-  padding-top: 30.122%;
+  padding-top: 30.286%;
 }
 
 video {
