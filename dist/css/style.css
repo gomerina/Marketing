@@ -1293,8 +1293,8 @@ video {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-.timer-box.has-timer .man__control {
-  display: none;
+.timer-box.has-timer .man__buttons {
+  display: none !important;
 }
 .timer-box.hidden {
   opacity: 0;

@@ -1189,8 +1189,8 @@ video {
 
 		&.has-timer {
 
-			& .man__control {
-				display: none;
+			& .man__buttons {
+				display: none !important;
 			}
 		}
 
