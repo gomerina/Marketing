@@ -1,0 +1,391 @@
+doctype html
+html(lang="ru")
+    head
+        include includes/head
+        title Document
+        include includes/variables
+    body 
+        include includes/header
+        main 
+            .main-screen 
+                .container 
+                    .main-screen__inner 
+                        .main-screen__content 
+                            h1 Больше чем маркетинг
+                            h3 меняем рекламную индустрию
+                        .main-screen__img
+                            picture 
+                                source(srcset="img/webp/main@x2.webp", type="image/webp")
+                                img(src="img/main@x2.jpg", alt="")
+            .page-content 
+                .container
+                    .section
+                        h2 Внешние факторы
+                        .togglers__item-textbox
+                             
+                            h3 оказывающие влияние на продуктовый ретейл
+                            p Изменения структуры населения, образа жизни, стремлений и возможностей покупателей оказывают влияние на категорию продуктового ретейла
+                        .togglers 
+                            .togglers__item 
+                                .togglers__item-head.active.jsTogglerHead 
+                                    .togglers__item-icon 
+                                    h3 
+                                        span DataInsight: исследование 
+                                        span «Интернет-торговля в России 2023»
+                                .togglers__item-body.jsTogglerBody(style="display: block;")
+                                    .togglers__item-row 
+                                        a(href="#").togglers__item-link
+                                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 1V17M8.5 17L1 10.1429M8.5 17L16 10.1429" stroke="#107F8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            span скачать исследование
+                                        a(href="#").hashtag.ecommerce #ecommerce
+                                    .togglers__item-textbox 
+                                        p Молодежь и дети являются «законодателями моды», в том числе с точки зрения потребления. Тот, кто научится удовлетворять их запросы сегодня, завтра будет «в тренде».
+                            .togglers__item 
+                                .togglers__item-head.jsTogglerHead 
+                                    .togglers__item-icon 
+                                    h3 
+                                        span DataInsight: исследование
+                                        span «Маркетплейсы 2024: тренды, стратегии, точки роста»  
+                                .togglers__item-body.jsTogglerBody
+                                    .togglers__item-row 
+                                        a(href="#").togglers__item-link
+                                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 1V17M8.5 17L1 10.1429M8.5 17L16 10.1429" stroke="#107F8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            span скачать исследование
+                                        a(href="#").hashtag.ecommerce #ecommerce
+                                    .togglers__item-textbox 
+                                        p С одной стороны, ритейлерам нужны инновации, которые приведут к росту маржинальности бизнеса, но с другой — необходимо поддерживать конкурентноспособный уровень клиентского опыта и быть интересным и заметным для своего покупателя.
+                                        p Поэтому часто мы можем встретить инновации, которые работают не только напрямую на эффективность, сколько на создание коммуникационного эффекта, в том числе хайпа.
+                                    .togglers__grid 
+                                        each item in grid 
+                                            .togglers__grid-item 
+                                                picture 
+                                                    source(srcset=item.webp, type="image/webp")
+                                                    img(src=item.img, alt="")
+                            .togglers__item 
+                                .togglers__item-head.jsTogglerHead 
+                                    .togglers__item-icon 
+                                    h3 
+                                        span DataInsight: исследование
+                                        span «Интернет-торговля в России 2023»
+                                .togglers__item-body.jsTogglerBody
+                                    .togglers__item-row 
+                                        a(href="#").togglers__item-link
+                                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 1V17M8.5 17L1 10.1429M8.5 17L16 10.1429" stroke="#107F8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            span скачать исследование
+                                        a(href="#").hashtag.food #готовая еда
+                                    
+                                    .togglers__banner
+                                        picture 
+                                            source(srcset="img/webp/banner@x2.webp", type="image/webp")
+                                            img(src="img/banner@x2.jpg", alt="")
+                                    .togglers__item-textbox 
+                                        p Молодежь и дети являются «законодателями моды», в том числе с точки зрения потребления. Тот, кто научится удовлетворять их запросы сегодня, завтра будет «в тренде».
+                            .togglers__item 
+                                .togglers__item-head.jsTogglerHead 
+                                    .togglers__item-icon 
+                                    h3 
+                                        span Mediascope: исследование «Поиск в ecom» 
+                                .togglers__item-body.jsTogglerBody
+                                    .togglers__item-row 
+                                        a(href="#").togglers__item-link
+                                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 1V17M8.5 17L1 10.1429M8.5 17L16 10.1429" stroke="#107F8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            span скачать исследование
+                                        a(href="#").hashtag.generation #поколения
+                                    .togglers__item-textbox 
+                                        p Молодежь и дети являются «законодателями моды», в том числе с точки зрения потребления. Тот, кто научится удовлетворять их запросы сегодня, завтра будет «в тренде».
+                                    .togglers__banner
+                                        picture 
+                                            source(srcset="img/webp/banner@x2.webp", type="image/webp")
+                                            img(src="img/banner@x2.jpg", alt="")
+                            .togglers__item 
+                                .togglers__item-head.jsTogglerHead 
+                                    .togglers__item-icon 
+                                    h3 
+                                        span Молодые (поколения Z и Альфа)
+                                        span привносят новые потребительские паттерны
+                                .togglers__item-body.jsTogglerBody
+                                    .togglers__item-row 
+                                        a(href="#").togglers__item-link
+                                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 1V17M8.5 17L1 10.1429M8.5 17L16 10.1429" stroke="#107F8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            span скачать исследование
+                                        a(href="#").hashtag.eco #экономика
+                                    .togglers__flex 
+                                        .togglers__flex-text 
+                                            p В связи с увеличением скорости жизни и ростом возможностей и потребностей, люди всё больше стремятся к удобству.
+                                            p Можно говорить о том, что в обществе сформировался культ сиюминутности. Покупатели хотят получать всё в моменте — всё должно работать всегда, везде, быстро. Не хотят тратить время и силы, чтобы разбираться — всё должно быть максимально простым и понятным.
+                                        .togglers__flex-preview 
+                                            picture 
+                                                source(srcset="img/webp/fp@x2.webp", type="image/webp")
+                                                img(src="img/fp@x2.jpg", alt="")
+                            .togglers__item 
+                                .togglers__item-head.jsTogglerHead 
+                                    .togglers__item-icon 
+                                    h3 
+                                        span Mediascope: исследование
+                                        span «Медипотребление и e‑commerce в России»
+                                .togglers__item-body.jsTogglerBody
+                                    .togglers__item-row 
+                                        a(href="#").togglers__item-link
+                                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 1V17M8.5 17L1 10.1429M8.5 17L16 10.1429" stroke="#107F8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            span скачать исследование
+                                        a(href="#").hashtag.tech #фудтех
+                                    .togglers__flex.reverse 
+                                        .togglers__flex-text 
+                                            p В связи с увеличением скорости жизни и ростом возможностей и потребностей, люди всё больше стремятся к удобству.
+                                            p Можно говорить о том, что в обществе сформировался культ сиюминутности. Покупатели хотят получать всё в моменте — всё должно работать всегда, везде, быстро. Не хотят тратить время и силы, чтобы разбираться — всё должно быть максимально простым и понятным.
+                                        .togglers__flex-preview 
+                                            picture 
+                                                source(srcset="img/webp/fp@x2.webp", type="image/webp")
+                                                img(src="img/fp@x2.jpg", alt="")
+
+                            .togglers__item 
+                                .togglers__item-head.jsTogglerHead 
+                                    .togglers__item-icon 
+                                    h3 
+                                        span Молодые (поколения Z и Альфа)
+                                        span привносят новые потребительские паттерны
+                                .togglers__item-body.jsTogglerBody
+                                    .togglers__item-row 
+                                        a(href="#").togglers__item-link
+                                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 1V17M8.5 17L1 10.1429M8.5 17L16 10.1429" stroke="#107F8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            span скачать исследование
+                                        a(href="#").hashtag.eco #экономика
+                                    .togglers__flex 
+                                        .togglers__flex-text 
+                                            p В связи с увеличением скорости жизни и ростом возможностей и потребностей, люди всё больше стремятся к удобству.
+                                            p Можно говорить о том, что в обществе сформировался культ сиюминутности. Покупатели хотят получать всё в моменте — всё должно работать всегда, везде, быстро. Не хотят тратить время и силы, чтобы разбираться — всё должно быть максимально простым и понятным.
+                                        .togglers__flex-preview 
+                                            picture 
+                                                source(srcset="img/webp/fp@x2.webp", type="image/webp")
+                                                img(src="img/fp@x2.jpg", alt="")
+                            .togglers__item 
+                                .togglers__item-head.jsTogglerHead 
+                                    .togglers__item-icon 
+                                    h3 
+                                        span Яндекс & GFK: исследование «Развитие онлайн-торговли в России»
+                                .togglers__item-body.jsTogglerBody
+                                    .togglers__item-row 
+                                        a(href="#").togglers__item-link
+                                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 1V17M8.5 17L1 10.1429M8.5 17L16 10.1429" stroke="#107F8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            span скачать исследование
+                                        a(href="#").hashtag.eco #экономика
+                                    .togglers__item-textbox 
+                                        p Молодежь и дети являются «законодателями моды», в том числе с точки зрения потребления. Тот, кто научится удовлетворять их запросы сегодня, завтра будет «в тренде».
+                            .togglers__item 
+                                .togglers__item-head.jsTogglerHead 
+                                    .togglers__item-icon 
+                                    h3 
+                                        span SimilarWeb: исследование «Состояние электронной торговли 2024. Цифровые тенденции и стратегии успеха»
+                                .togglers__item-body.jsTogglerBody
+                                    .togglers__item-row 
+                                        a(href="#").togglers__item-link
+                                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 1V17M8.5 17L1 10.1429M8.5 17L16 10.1429" stroke="#107F8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            span скачать исследование
+                                        a(href="#").hashtag.eco #экономика
+                                    .togglers__item-textbox 
+                                        p Молодежь и дети являются «законодателями моды», в том числе с точки зрения потребления. Тот, кто научится удовлетворять их запросы сегодня, завтра будет «в тренде».
+                            .togglers__item 
+                                .togglers__item-head.jsTogglerHead 
+                                    .togglers__item-icon 
+                                    h3 
+                                        span GFK: исследование «Generations. Как отличаются покупатели разных поколений» 
+                                .togglers__item-body.jsTogglerBody
+                                    .togglers__item-row 
+                                        a(href="#").togglers__item-link
+                                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 1V17M8.5 17L1 10.1429M8.5 17L16 10.1429" stroke="#107F8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            span скачать исследование
+                                        a(href="#").hashtag.eco #экономика
+                                    .togglers__item-textbox 
+                                        p Молодежь и дети являются «законодателями моды», в том числе с точки зрения потребления. Тот, кто научится удовлетворять их запросы сегодня, завтра будет «в тренде».
+                                    
+                    
+                    .section 
+                        h2 Лучшие практики
+                        .togglers__item-textbox 
+                            p Молодежь и дети являются «законодателями моды», в том числе с точки зрения потребления. Тот, кто научится удовлетворять их запросы сегодня, завтра будет «в тренде».
+                        .section__filters 
+                            each item in filters
+                                if(item.checked)
+                                    label.secion__filters-label 
+                                        input(type="radio" name="filters" checked) 
+                                        span.section__filters-text=item.text
+                                else 
+                                    label.secion__filters-label 
+                                        input(type="radio" name="filters") 
+                                        span.section__filters-text=item.text
+                        .togglers 
+                            .togglers__item 
+                                .togglers__item-head.jsTogglerHead 
+                                    .togglers__item-icon 
+                                    h3 
+                                        span Mediascope: исследование 
+                                        span «Медипотребление и e‑commerce в России»
+                                .togglers__item-body.jsTogglerBody
+                                    .togglers__item-row 
+                                        a(href="#").togglers__item-link
+                                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 1V17M8.5 17L1 10.1429M8.5 17L16 10.1429" stroke="#107F8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            span скачать исследование
+                                        a(href="#").hashtag.tech #фудтех
+                                    .togglers__flex.reverse
+                                        .togglers__flex-text 
+                                            p В связи с увеличением скорости жизни и ростом возможностей и потребностей, люди всё больше стремятся к удобству.
+                                            p Можно говорить о том, что в обществе сформировался культ сиюминутности. Покупатели хотят получать всё в моменте — всё должно работать всегда, везде, быстро. Не хотят тратить время и силы, чтобы разбираться — всё должно быть максимально простым и понятным.
+                                        .togglers__flex-preview 
+                                            picture 
+                                                source(srcset="img/webp/fp@x2.webp", type="image/webp")
+                                                img(src="img/fp@x2.jpg", alt="")
+                            .togglers__item 
+                                .togglers__item-head.jsTogglerHead 
+                                    .togglers__item-icon 
+                                    h3 
+                                        span Яндекс & GFK: исследование «Развитие онлайн-торговли в России»
+                                .togglers__item-body.jsTogglerBody
+                                    .togglers__item-row 
+                                        a(href="#").togglers__item-link
+                                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 1V17M8.5 17L1 10.1429M8.5 17L16 10.1429" stroke="#107F8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            span скачать исследование
+                                        a(href="#").hashtag.tech #фудтех
+                                    .togglers__flex.reverse
+                                        .togglers__flex-text 
+                                            p В связи с увеличением скорости жизни и ростом возможностей и потребностей, люди всё больше стремятся к удобству.
+                                            p Можно говорить о том, что в обществе сформировался культ сиюминутности. Покупатели хотят получать всё в моменте — всё должно работать всегда, везде, быстро. Не хотят тратить время и силы, чтобы разбираться — всё должно быть максимально простым и понятным.
+                                        .togglers__flex-preview 
+                                            picture 
+                                                source(srcset="img/webp/fp@x2.webp", type="image/webp")
+                                                img(src="img/fp@x2.jpg", alt="")
+                            .togglers__item 
+                                .togglers__item-head.jsTogglerHead 
+                                    .togglers__item-icon 
+                                    h3 
+                                        span SimilarWeb: исследование «Состояние электронной торговли 2024. Цифровые тенденции и стратегии успеха»
+                                .togglers__item-body.jsTogglerBody
+                                    .togglers__item-row 
+                                        a(href="#").togglers__item-link
+                                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 1V17M8.5 17L1 10.1429M8.5 17L16 10.1429" stroke="#107F8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            span скачать исследование
+                                        a(href="#").hashtag.tech #фудтех
+                                    .togglers__flex.reverse
+                                        .togglers__flex-text 
+                                            p В связи с увеличением скорости жизни и ростом возможностей и потребностей, люди всё больше стремятся к удобству.
+                                            p Можно говорить о том, что в обществе сформировался культ сиюминутности. Покупатели хотят получать всё в моменте — всё должно работать всегда, везде, быстро. Не хотят тратить время и силы, чтобы разбираться — всё должно быть максимально простым и понятным.
+                                        .togglers__flex-preview 
+                                            picture 
+                                                source(srcset="img/webp/fp@x2.webp", type="image/webp")
+                                                img(src="img/fp@x2.jpg", alt="")
+                            .togglers__item 
+                                .togglers__item-head.jsTogglerHead 
+                                    .togglers__item-icon 
+                                    h3 
+                                        span GFK: исследование «Generations. Как отличаются покупатели разных поколений» 
+                                .togglers__item-body.jsTogglerBody
+                                    .togglers__item-row 
+                                        a(href="#").togglers__item-link
+                                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 1V17M8.5 17L1 10.1429M8.5 17L16 10.1429" stroke="#107F8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            span скачать исследование
+                                        a(href="#").hashtag.tech #фудтех
+                                    .togglers__flex.reverse
+                                        .togglers__flex-text 
+                                            p В связи с увеличением скорости жизни и ростом возможностей и потребностей, люди всё больше стремятся к удобству.
+                                            p Можно говорить о том, что в обществе сформировался культ сиюминутности. Покупатели хотят получать всё в моменте — всё должно работать всегда, везде, быстро. Не хотят тратить время и силы, чтобы разбираться — всё должно быть максимально простым и понятным.
+                                        .togglers__flex-preview 
+                                            picture 
+                                                source(srcset="img/webp/fp@x2.webp", type="image/webp")
+                                                img(src="img/fp@x2.jpg", alt="")
+
+                    .section 
+                        h2 Лучшие практики
+                        .togglers__item-textbox 
+                            p Молодежь и дети являются «законодателями моды», в том числе с точки зрения потребления. Тот, кто научится удовлетворять их запросы сегодня, завтра будет «в тренде».
+                        .togglers 
+                            .togglers__item 
+                                .togglers__item-head.jsTogglerHead 
+                                    .togglers__item-icon 
+                                    h3 
+                                        span Экологические инициативы Lidl: станции для 
+                                        span многоразовой заправки бытовой химии
+                                .togglers__item-body.jsTogglerBody
+                                    .togglers__item-textbox 
+                                        p С одной стороны, ритейлерам нужны инновации, которые приведут к росту маржинальности бизнеса, но с другой — необходимо поддерживать конкурентноспособный уровень клиентского опыта и быть интересным и заметным для своего покупателя.
+                                        p Поэтому часто мы можем встретить инновации, которые работают не только напрямую на эффективность, сколько на создание коммуникационного эффекта, в том числе хайпа.
+                                    .togglers__item-row 
+                                        a(href="#").togglers__item-link
+                                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 1V17M8.5 17L1 10.1429M8.5 17L16 10.1429" stroke="#107F8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            span скачать исследование
+                            .togglers__item 
+                                .togglers__item-head.jsTogglerHead 
+                                    .togglers__item-icon 
+                                    h3 
+                                        span DataInsight: исследование 
+                                        span «Интернет-торговля в России 2023»
+                                .togglers__item-body.jsTogglerBody
+                                    .togglers__item-textbox 
+                                        p С одной стороны, ритейлерам нужны инновации, которые приведут к росту маржинальности бизнеса, но с другой — необходимо поддерживать конкурентноспособный уровень клиентского опыта и быть интересным и заметным для своего покупателя.
+                                    .togglers__item-row 
+                                        a(href="#").togglers__item-link
+                                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 1V17M8.5 17L1 10.1429M8.5 17L16 10.1429" stroke="#107F8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            span скачать исследование
+                            .togglers__item 
+                                .togglers__item-head.jsTogglerHead 
+                                    .togglers__item-icon 
+                                    h3 
+                                        span DataInsight: исследование 
+                                        span «Интернет-торговля в России 2023»
+                                .togglers__item-body.jsTogglerBody
+                                    .togglers__item-row 
+                                        a(href="#").togglers__item-link
+                                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 1V17M8.5 17L1 10.1429M8.5 17L16 10.1429" stroke="#107F8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            span скачать исследование
+                            .togglers__item 
+                                .togglers__item-head.jsTogglerHead 
+                                    .togglers__item-icon 
+                                    h3 
+                                        span SimilarWeb: исследование «Состояние электронной торговли 2024. Цифровые тенденции и стратегии успеха» 
+                                .togglers__item-body.jsTogglerBody
+                                    .togglers__item-row 
+                                        a(href="#").togglers__item-link
+                                            <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 1V17M8.5 17L1 10.1429M8.5 17L16 10.1429" stroke="#107F8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                            span скачать исследование
+                                    
+
+                        
+                                    
+
+
+        include includes/footer
+        
