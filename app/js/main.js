@@ -57,10 +57,6 @@ $(document).ready(function () {
 			type: "iframe",
 			opts: {
 				touch: false,
-				//afterLoad: function (instance, current) {
-				//    let objSource = current.$content;
-				//    objSource.find('.jsTel').inputmask({ "mask": "+7 (999) 999-99-99" });
-				//},
 			},
 		});
 	});
@@ -131,6 +127,11 @@ $(document).ready(function () {
 		}
 
 		const targetDate = new Date("2024-09-25T09:00:00");
+
+		function formatTime(unit) {
+			return unit < 10 ? '0' + unit : unit; // Добавление нуля перед числом
+		}
+
 		function updateTimer() {
 			const now = new Date();
 			const remaining = targetDate - now;
@@ -147,15 +148,15 @@ $(document).ready(function () {
 			const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
 
 			const outputTimer = `
-				<div class="timer__item hours"><span>${totalHours}</span> <p>${declensionTime(
+			<div class="timer__item hours"><span>${formatTime(totalHours)}</span> <p>${declensionTime(
 				totalHours,
 				["час", "часа", "часов"]
 			)}</p></div>
-				<div class="timer__item minutes"><span>${minutes}</span> <p>${declensionTime(
+			<div class="timer__item minutes"><span>${formatTime(minutes)}</span> <p>${declensionTime(
 				minutes,
 				["минута", "минуты", "минут"]
 			)}</p></div>
-			`;
+		  `;
 			$("#timer .timer__row").html(outputTimer);
 		}
 
