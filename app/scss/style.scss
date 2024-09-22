@@ -1187,6 +1187,13 @@ video {
 		right: 140px;
 		transition: .3s ease-in-out;
 
+		&.has-timer {
+
+			& .man__control {
+				display: none;
+			}
+		}
+
 		&.hidden {
 			opacity: 0;
 			visibility: hidden;
