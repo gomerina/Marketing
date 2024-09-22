@@ -176,7 +176,7 @@ input:-webkit-autofill {
   font-display: swap;
 }
 .container {
-  max-width: 1180px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 0 30px;
 }
@@ -1059,17 +1059,19 @@ p:not(:last-child) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-box-align: end;
   -ms-flex-align: end;
   align-items: flex-end;
-  gap: 24px;
+  gap: 40px;
   margin: 0 0 72px 0;
 }
 .rules__head * {
   margin: 0;
+}
+.rules__head h2 {
+  width: 540px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 .rules__head span {
   max-width: 496px;
@@ -1521,6 +1523,9 @@ video {
     align-items: flex-start;
     gap: 40px;
     margin: 0 0 64px 0;
+  }
+  .rules__head h2 {
+    width: auto;
   }
   .rules__head span {
     max-width: unset;

@@ -67,7 +67,7 @@
 }
 
 .container {
-	max-width: 1180px;
+	max-width: 1240px;
 	margin: 0 auto;
 	padding: 0 30px;
 }
@@ -969,13 +969,17 @@ p:not(:last-child) {
 .rules {
 	&__head {
 		display: flex;
-		justify-content: space-between;
 		align-items: flex-end;
-		gap: 24px;
+		gap: 40px;
 		margin: 0 0 72px 0;
 
 		& * {
 			margin: 0;
+		}
+
+		& h2 {
+			width: 540px;
+			flex-shrink: 0;
 		}
 
 		& span {
@@ -1454,6 +1458,10 @@ video {
 			align-items: flex-start;
 			gap: 40px;
 			margin: 0 0 64px 0;
+
+			& h2 {
+				width: auto;
+			}
 
 			& span {
 				max-width: unset;
