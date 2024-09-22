@@ -48,26 +48,7 @@ $(document).ready(function () {
 		$(this).toggleClass("active");
 		$(this).next(".jsTogglerBody").slideToggle();
 	});
-	$(document).on("click", ".jsAnchorLink", function () {
-		$(".jsBurger, .jsMenu").removeClass("active");
-		let anchor = $(this).attr("href");
-		$("html, body").animate(
-			{
-				scrollTop: $(anchor).offset().top - 140,
-			},
-			600
-		);
-		return false
-	});
-	$(document).on("click", ".jsAnchorLogo", function () {
-		$("html, body").animate(
-			{
-				scrollTop: 0,
-			},
-			600
-		);
-		return false;
-	});
+
 	$(document).on("click", ".jsOpenFrame", function (e) {
 		let objButton = $(this);
 		e.preventDefault();
@@ -91,7 +72,33 @@ $(document).ready(function () {
 	$(document).on("click", ".jsBurger", function () {
 		$(".jsBurger, .jsMenu").toggleClass("active");
 	});
-
+	$(document).on("click", ".jsAnchorLink", function () {
+		$(".jsBurger, .jsMenu").removeClass("active");
+		let anchor = $(this).attr("href");
+		var $this = $(this)
+		window.removeEventListener('scroll', scrollNav)
+		$("html, body").animate(
+			{
+				scrollTop: $(anchor).offset().top - 140,
+			},
+			600, function () {
+				window.addEventListener('scroll', scrollNav)
+				window.location.hash = '#' + '/' + anchor.replace('#', '')
+				$('.jsAnchorLink').removeClass('current')
+				$this.addClass('current')
+			}
+		);
+		return false
+	});
+	$(document).on("click", ".jsAnchorLogo", function () {
+		$("html, body").animate(
+			{
+				scrollTop: 0,
+			},
+			600
+		);
+		return false;
+	});
 	if (!window.location.hash) {
 		$(".jsAnchorLink").first().addClass("current");
 	} else {
@@ -101,14 +108,15 @@ $(document).ready(function () {
 				$this.addClass("current");
 			}
 		});
-		placeTimer()
-		scrollNav()
+
 		$("html, body").animate(
 			{
 				scrollTop: $(window.location.hash.replace('/', '')).offset().top - 140,
 			},
 			600
 		);
+		placeTimer()
+		scrollNav()
 		return false;
 	}
 
@@ -156,23 +164,22 @@ $(document).ready(function () {
 	}
 
 	function scrollNav() {
-		window.addEventListener('scroll', () => {
-			const sections = document.querySelectorAll('section');
-			const navLinks = document.querySelectorAll('.jsAnchorLink');
+		const sections = document.querySelectorAll('section');
+		const navLinks = document.querySelectorAll('.jsAnchorLink');
 
-			sections.forEach(section => {
-				const rect = section.getBoundingClientRect();
-				if (rect.top >= -50 && rect.top <= 150) {
-					navLinks.forEach(link => {
-						link.classList.remove('current');
-						if (link.getAttribute('href').substring(1) === section.id) {
-							link.classList.add('current');
-							window.location.hash = '#' + '/' + section.id
-						}
-					});
-				}
-			});
+		sections.forEach(section => {
+			const rect = section.getBoundingClientRect();
+			if (rect.top >= -50 && rect.top <= 150) {
+				navLinks.forEach(link => {
+					link.classList.remove('current');
+					if (link.getAttribute('href').substring(1) === section.id) {
+						link.classList.add('current');
+						window.location.hash = '#' + '/' + section.id
+					}
+				});
+			}
 		});
+		window.addEventListener('scroll', scrollNav)
 	}
 	placeTimer()
 	scrollNav()
