@@ -96,9 +96,24 @@ $(document).ready(function () {
 		return false;
 	});
 
+	$(document).on('click', function () {
+		$('.jsTimerBox').removeClass('active')
+	})
+	$(document).on('click', '.jsTimerBox', function (e) {
+		e.stopPropagation();
+		$(this).toggleClass('active');
+	})
 
-
-
+	$(document).on('click', '.jsControl', function (e) {
+		e.stopPropagation()
+		$('.jsTimerBox').addClass('hidden')
+		$('.jsTimerBox').removeClass('active');
+		$('.jsBtn').removeClass('hidden')
+	})
+	$(document).on('click', '.jsBtn', function () {
+		$(this).addClass('hidden');
+		$('.jsTimerBox').removeClass('hidden')
+	})
 	if (!window.location.hash) {
 		$(".jsAnchorLink").first().addClass("current");
 	} else {

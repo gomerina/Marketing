@@ -1187,19 +1187,12 @@ video {
   -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
 }
-.man.active {
-  max-width: 340px;
-}
-.man__controls {
+.man__control {
   position: absolute;
-  top: 5px;
-  right: 5px;
-  z-index: 5;
-}
-.man__controls-item {
-  width: 28px;
-  height: 28px;
-  background: rgba(0, 0, 0, 0.2);
+  right: 10px;
+  bottom: 120px;
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1209,28 +1202,10 @@ video {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  z-index: 10;
   border-radius: 50%;
-  cursor: pointer;
-}
-.man__controls-item.hidden {
-  display: none;
-}
-.man__controls-item.status {
-  display: none;
-}
-.man__trigger {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
-}
-.man:hover .man__buttons {
-  display: block;
-  -webkit-animation: fade 0.5s linear;
-  animation: fade 0.5s linear;
+  width: 31px;
+  height: 31px;
 }
 .man__pic {
   position: relative;
@@ -1244,7 +1219,7 @@ video {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
   pointer-events: none;
 }
 .man__buttons {
@@ -1283,6 +1258,23 @@ video {
   background-size: 100% 100%;
 }
 
+.fixed-btn {
+  position: fixed;
+  bottom: 57px;
+  right: 0;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.fixed-btn.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .timer {
   padding: 16px 24px;
   padding-bottom: 22px;
@@ -1291,15 +1283,17 @@ video {
   backdrop-filter: blur(32px);
   width: 240px;
   height: 160px;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 .timer-box {
   position: fixed;
   z-index: 90;
   bottom: 20px;
   right: 140px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
-.timer-box.has-timer:hover .man__pic {
+.timer-box.hidden {
   opacity: 0;
   visibility: hidden;
 }
@@ -1358,6 +1352,15 @@ video {
   .compensate-for-scrollbar .man {
     right: 157px;
   }
+  .man:hover .man__buttons {
+    display: block;
+    -webkit-animation: fade 0.5s linear;
+    animation: fade 0.5s linear;
+  }
+  .timer-box.has-timer:hover .man__pic {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 @media screen and (max-width: 1024px) {
   .container {
@@ -1367,6 +1370,15 @@ video {
   .man {
     right: 40px;
     bottom: 40px;
+  }
+  .timer-box.has-timer.active .man__pic {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .timer-box.active .man__buttons {
+    display: block;
+    -webkit-animation: fade 0.5s linear;
+    animation: fade 0.5s linear;
   }
   .header {
     padding: 16px 0;
@@ -1832,6 +1844,10 @@ video {
   }
   .header__logo {
     width: 141px;
+  }
+  .header__menu {
+    min-height: calc(100vh - 65px);
+    top: 65px;
   }
   h2:not(.filters-slider__name) {
     font-size: 32px;

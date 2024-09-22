@@ -1032,8 +1032,20 @@ html(lang="ru")
                                                 img(src=item.img, alt="" loading="lazy")
 
         
-        .timer-box.has-timer.jsTimerBox
+
+        .fixed-btn.jsBtn 
+            <svg width="20" height="80" viewBox="0 0 37 146" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M36.1 145.9H19.5C8.7 145.9 0 137.2 0 126.4V19.5C0 8.7 8.7 0 19.5 0H36.1V145.9Z" fill="#003E14"/>
+                <path d="M21.5001 94.0001C20.5001 94.0001 19.6001 93.4001 19.2001 92.4001L13.1001 77.4001C12.1001 75.0001 12.1001 72.3001 13.1001 69.9001L19.2001 54.9001C19.7001 53.6001 21.2001 53.0001 22.5001 53.5001C23.8001 54.0001 24.4001 55.5001 23.9001 56.8001L17.8001 71.8001C17.3001 73.0001 17.3001 74.4001 17.8001 75.6001L23.9001 90.6001C24.4001 91.9001 23.8001 93.3001 22.5001 93.9001C22.1001 94.0001 21.8001 94.0001 21.5001 94.0001Z" fill="white"/>
+            </svg>
+
+        .timer-box.has-timer.hidden.jsTimerBox
             .man 
+                .man__control.jsControl 
+                    <svg width="15px" height="15px" viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 21.32L21 3.32001" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3 3.32001L21 21.32" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 .man__pic 
                     video(src="video/video.mp4" autoplay muted loop playsinline pip="false")
                 .man__buttons 
