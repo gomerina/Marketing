@@ -1188,7 +1188,7 @@ p:not(:last-child) {
   animation: fade 0.5s linear;
 }
 .man__pic img {
-  border-radius: 8px;
+  border-radius: 10px;
 }
 .man__buttons {
   padding: 0 0 16px 0;
@@ -1213,6 +1213,7 @@ p:not(:last-child) {
   gap: 8px;
   padding: 8px 15px;
   border-radius: 8px;
+  cursor: pointer;
 }
 .man__buttons-item:not(:last-child) {
   margin: 0 0 8px 0;
@@ -1220,6 +1221,9 @@ p:not(:last-child) {
 .man__buttons-icon {
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  background-size: 100% 100%;
 }
 
 .timer {
@@ -1285,6 +1289,11 @@ p:not(:last-child) {
   letter-spacing: 0.78px;
 }
 
+@media screen and (min-width: 1025px) {
+  .compensate-for-scrollbar .man {
+    right: 157px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .container {
     padding: 0 20px;
@@ -1540,6 +1549,7 @@ p:not(:last-child) {
   }
   .man__buttons-icon {
     width: 22px;
+    height: 22px;
   }
   .man__buttons-item {
     padding: 6px 11px;

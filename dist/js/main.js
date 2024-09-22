@@ -103,14 +103,16 @@ $(document).ready(function () {
 			}
 		});
 		placeTimer()
+		scrollNav()
 		$("html, body").animate(
 			{
-				scrollTop: $(window.location.hash).offset().top - 140,
+				scrollTop: $(window.location.hash.replace('/', '')).offset().top - 140,
 			},
 			600
 		);
 		return false;
 	}
+
 	function placeTimer() {
 		function declensionTime(value, words) {
 			const cases = [2, 0, 1, 1, 1, 2];
@@ -153,5 +155,26 @@ $(document).ready(function () {
 		const timerInterval = setInterval(updateTimer, 1000);
 		updateTimer();
 	}
+
+	function scrollNav() {
+		window.addEventListener('scroll', () => {
+			const sections = document.querySelectorAll('section');
+			const navLinks = document.querySelectorAll('.jsAnchorLink');
+
+			sections.forEach(section => {
+				const rect = section.getBoundingClientRect();
+				if (rect.top >= -50 && rect.top <= 150) {
+					navLinks.forEach(link => {
+						link.classList.remove('current');
+						if (link.getAttribute('href').substring(1) === section.id) {
+							link.classList.add('current');
+							window.location.hash = '#' + '/' + section.id
+						}
+					});
+				}
+			});
+		});
+	}
 	placeTimer()
+	scrollNav()
 });
