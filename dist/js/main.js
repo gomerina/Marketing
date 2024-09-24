@@ -54,9 +54,13 @@ $(document).ready(function () {
 		e.preventDefault();
 		$.fancybox.open({
 			src: objButton.data("url"),
-			type: "iframe",
+			type: "ajax",
 			opts: {
 				touch: false,
+				//afterLoad: function (instance, current) {
+				//	let objSource = current.$content;
+				//	objSource.find('iframe').attr('allow', "microphone")
+				//},
 			},
 		});
 	});
