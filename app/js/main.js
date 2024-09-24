@@ -54,9 +54,14 @@ $(document).ready(function () {
 		e.preventDefault();
 		$.fancybox.open({
 			src: objButton.data("url"),
-			type: "ajax",
+			type: "iframe",
 			opts: {
 				touch: false,
+				iframe: {
+					attr: {
+						allow: "microphone",
+					}
+				}
 				//afterLoad: function (instance, current) {
 				//	let objSource = current.$content;
 				//	objSource.find('iframe').attr('allow', "microphone")
