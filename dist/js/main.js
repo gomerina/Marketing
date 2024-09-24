@@ -158,7 +158,7 @@ $(document).ready(function () {
 			if (remaining <= 0) {
 				clearInterval(timerInterval);
 				$("#timer").remove();
-				$('.jsTimerBox').removeClass('.has-timer')
+				$('.jsTimerBox').removeClass('has-timer')
 				return;
 			}
 
@@ -203,4 +203,5 @@ $(document).ready(function () {
 	}
 	placeTimer()
 	scrollNav()
+
 });
