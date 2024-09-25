@@ -1167,17 +1167,6 @@ p:not(:last-child) {
   padding-top: 30.286%;
 }
 
-.frame-modal {
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  background: transparent;
-}
-.frame-modal iframe {
-  width: 100%;
-  height: 100%;
-}
-
 video {
   max-width: 100%;
 }

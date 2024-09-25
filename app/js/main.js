@@ -59,13 +59,9 @@ $(document).ready(function () {
 				touch: false,
 				iframe: {
 					attr: {
-						allow: "microphone",
+						allow: "microphone"
 					}
 				}
-				//afterLoad: function (instance, current) {
-				//	let objSource = current.$content;
-				//	objSource.find('iframe').attr('allow', "microphone")
-				//},
 			},
 		});
 	});
@@ -154,7 +150,7 @@ $(document).ready(function () {
 			return output;
 		}
 
-		const targetDate = new Date("2024-09-25T09:00:00");
+		const targetDate = new Date("2024-09-24T15:23:00");
 
 		function formatTime(unit) {
 			return unit < 10 ? '0' + unit : unit; // Добавление нуля перед числом
